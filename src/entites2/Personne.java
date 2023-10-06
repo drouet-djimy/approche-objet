@@ -15,8 +15,8 @@ public class Personne {
 		this.adresse = adresse;
 	}
 	public void getPrenomNom() {
-		System.out.println("Prénom : "+prenom);
-		System.out.println("nom : "+nom);
+		System.out.println("Prénom : "+prenom.toUpperCase());
+		System.out.println("nom : "+nom.toUpperCase());
 	}
 	public String getNom() {
 		return nom;
