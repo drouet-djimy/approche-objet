@@ -1,11 +1,20 @@
 package fr.diginamic.banque.entites;
+
 public class Compte {
-	int numero =145865;
-	float solde =14500.49f;
+	int numero;
+	double moontant;
 	
-	public Compte(int numero, float solde) {
+	public Compte(int numero, double moontant) {
+		super();
 		this.numero = numero;
-		this.solde = solde;
+		this.moontant = moontant;
+		
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Compte [numero=" + numero + ", moontant=" + moontant + "]";
 	}
 
 	/**
@@ -23,17 +32,17 @@ public class Compte {
 	}
 
 	/**
-	 * @return the solde
+	 * @return the moontant
 	 */
-	public float getSolde() {
-		return solde;
+	public double getMoontant() {
+		return moontant;
 	}
 
 	/**
-	 * @param solde the solde to set
+	 * @param moontant the moontant to set
 	 */
-	public void setSolde(float solde) {
-		this.solde = solde;
+	public void setMoontant(double moontant) {
+		this.moontant = moontant;
 	}
 	
 }
