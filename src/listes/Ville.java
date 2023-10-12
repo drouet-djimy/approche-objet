@@ -1,13 +1,13 @@
 package listes;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
 	String nom;
 	int nbHabitants;
 	
 	public Ville() {
 		nom="ville";
 		nbHabitants=0;
-		// TODO Auto-generated constructor stub
+		
 	}
 	/**
 	 * @param nom
@@ -46,4 +46,26 @@ public class Ville {
 	public void getInfos() {
 		System.out.println(nom+ " Avec "+nbHabitants+" habitants");
 	}
+	
+	@Override
+	public int compareTo(Ville ville) {
+		int resultat;
+		if(this.nbHabitants >ville.getNbHabitants()) {
+			resultat=1;
+		}
+		if(this.nbHabitants < ville.getNbHabitants()) {
+			resultat=-1;
+		}
+		else {
+			resultat=0;
+		}
+		return resultat;
+	}
+	
+	@Override
+	public String toString() {
+		return "Ville [nom=" + nom + ", nbHabitants=" + nbHabitants + "]";
+	}
+	
+	
 }
