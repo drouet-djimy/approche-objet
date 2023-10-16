@@ -28,7 +28,7 @@ public class TestTriVille {
 
 		System.out.println(" \n-----------------------------------------------------------------------\n");
 		
-		// trie par nom d'habitants
+		// trie par nom de ville
 		System.out.println("Trie par nom de ville : ");
 		Collections.sort(listeVille, new ComparatorNom());
 		for (Ville ville : listeVille) {

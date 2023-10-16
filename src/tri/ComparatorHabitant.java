@@ -6,10 +6,6 @@ import listes.Ville;
 
 public class ComparatorHabitant implements Comparator<Ville> {
 
-	public ComparatorHabitant() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public int compare(Ville v1, Ville v2) {
 		int resultat;
