@@ -36,6 +36,6 @@ public class TestCalendar {
 		System.out.println("\n-----------------------");
 		System.out.println("Allemand :");
 		SimpleDateFormat formateurAllemand = new SimpleDateFormat("yyyy/MM/dd EEEE MMMM à HH:mm:ss",Locale.GERMANY);
-		System.out.println(formateurChine.format(dateRN));
+		System.out.println(formateurAllemand.format(dateRN));
 	}
 }
