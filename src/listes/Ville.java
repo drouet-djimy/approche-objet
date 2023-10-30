@@ -5,13 +5,27 @@ import java.util.Objects;
 public class Ville implements Comparable<Ville> {
 	String nom;
 	int nbHabitants;
+	Continent continent;
 
 	public Ville() {
 		nom = "ville";
 		nbHabitants = 0;
+		continent=null;
 	}
 
-	/**
+	/**CONSTRUCTOR
+	 * @param nom
+	 * @param nbHabitants
+	 * @param continent
+	 */
+	public Ville(String nom, int nbHabitants,Continent continent) {
+		super();
+		this.nom = nom;
+		this.nbHabitants = nbHabitants;
+		this.continent=continent;
+	}
+	
+	/**CONSTRUCTOR
 	 * @param nom
 	 * @param nbHabitants
 	 */
@@ -19,6 +33,7 @@ public class Ville implements Comparable<Ville> {
 		super();
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
+		this.continent=null;
 	}
 
 	/**
@@ -52,6 +67,22 @@ public class Ville implements Comparable<Ville> {
 	public void getInfos() {
 		System.out.println(nom + " Avec " + nbHabitants + " habitants");
 	}
+	
+	
+
+	/**
+	 * @return the continent
+	 */
+	public Continent getContinent() {
+		return continent;
+	}
+
+	/**
+	 * @param continent the continent to set
+	 */
+	public void setContinent(Continent continent) {
+		this.continent = continent;
+	}
 
 	@Override
 	public int compareTo(Ville ville) {
@@ -69,7 +100,7 @@ public class Ville implements Comparable<Ville> {
 
 	@Override
 	public String toString() {
-		return "Ville [nom=" + nom + ", nbHabitants=" + nbHabitants + "]";
+		return "Ville [nom=" + nom + ", nbHabitants=" + nbHabitants+ ", continent=" + continent.getLibelle() + "]";
 	}
 
 	@Override
@@ -78,11 +109,7 @@ public class Ville implements Comparable<Ville> {
 			return false;
 		}
 		Ville other = (Ville) object;
-		if (Objects.equals(getNom(), other.getNom()) && Objects.equals(getNbHabitants(), other.getNbHabitants())) {
-			return true;
-		} else {
-			return false;
-		}
+		return (Objects.equals(this.getNom(), other.getNom())&& this.getNbHabitants()==other.nbHabitants);
 	}
 	@Override
 	public int hashCode() {

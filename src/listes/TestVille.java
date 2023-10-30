@@ -71,7 +71,10 @@ public class TestVille {
 		for (Ville ville : listeVille) {
 			ville.getInfos();
 		}
-
+		
+		Ville v1=new Ville("Marseille",850700);
+		Ville v2=new Ville("Marseille",850700);
+		System.out.println(v1.equals(v2));
 	}
 
 }
